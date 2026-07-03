@@ -39,6 +39,10 @@ jobs:
         run: |
           mkdir -p _site
           cp -r index.html css js _site/
+          # SEO / discoverability + icons + social preview image.
+          cp robots.txt sitemap.xml llms.txt \
+             og-image.png og-image.svg \
+             favicon.svg apple-touch-icon.png apple-touch-icon.svg _site/
           # Bypass Jekyll processing — this is plain static HTML.
           touch _site/.nojekyll
           # Publish a custom domain if a CNAME file exists at the repo root.

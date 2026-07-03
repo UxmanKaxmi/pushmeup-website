@@ -1,0 +1,33 @@
+# PushMeUp
+
+> PushMeUp is a social motivation app where you post something you have been
+> avoiding, and real people tap "Push" to encourage you to start and finish it.
+> When you complete your goal, you push someone else forward. It is currently
+> in free beta for iPhone and Android.
+
+PushMeUp is not a habit tracker or productivity dashboard. There are no streaks
+or charts. It is a small, human community built around one loop: say what you
+are avoiding, get real pushes from people (often strangers), make progress,
+finish, and then pass the push on to someone else.
+
+## How it works
+
+1. Say it out loud — post the thing you keep putting off, in one honest sentence.
+2. Get pushed — real people show up with a small push to help you start.
+3. Do it, pass it on — share progress, finish the task, then push someone else forward.
+
+## Key facts
+
+- Category: social motivation / accountability app
+- Platforms: iOS (iPhone) and Android
+- Status: free during beta (early access)
+- Join the beta: https://pushmeup.app/
+- Website: https://pushmeup.app/
+
+## FAQ
+
+- What is a push? A small, real nudge from another person — a tap that says "you've got this, go." It appears on your post so you can see people are rooting for you.
+- Do I need to know people on the app? No. Most pushes come from people you have never met. You can invite friends, but you do not need them to start.
+- Is PushMeUp a productivity app? Not really. No streaks or charts. It is about people helping people start, keep going, and finish.
+- Is PushMeUp free? Yes, completely free during the beta.
+- How do I join the beta? Tap "Join the beta" on https://pushmeup.app/ and get set up on iPhone or Android in a couple of minutes.
