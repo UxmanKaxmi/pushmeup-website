@@ -1,0 +1,56 @@
+name: Deploy to GitHub Pages
+
+# Deploys the static site to GitHub Pages on every push to main.
+# No build step, no backend, no secrets — it just publishes the files.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions the deploy needs (nothing more).
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; let an in-progress one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Auto-enable Pages (build type: GitHub Actions) if it isn't already.
+          enablement: true
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r index.html css js _site/
+          # Bypass Jekyll processing — this is plain static HTML.
+          touch _site/.nojekyll
+          # Publish a custom domain if a CNAME file exists at the repo root.
+          # To connect pushmeup.app later: create a file named CNAME containing
+          # "pushmeup.app" and push — the next deploy will serve it.
+          if [ -f CNAME ]; then cp CNAME _site/; fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

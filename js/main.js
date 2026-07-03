@@ -3,16 +3,18 @@
    ============================================================ */
 
 /**
- * CTA destinations: fill these in when the beta links are live.
- * Any element with [data-cta] gets wired here:
+ * CTA destinations come from js/config.js (window.PUSHMEUP_CONFIG) — that
+ * is the single place to edit the links. Any element with [data-cta] is
+ * wired here:
  *   - If a platform URL matches the visitor's device, use it.
- *   - Otherwise fall back to `fallback` (early-access form).
+ *   - Otherwise fall back to the signup form.
  *   - If everything is empty, CTAs scroll to the beta section.
  */
+const CFG = window.PUSHMEUP_CONFIG || {};
 const CTA_CONFIG = {
-  ios: '',      // e.g. 'https://testflight.apple.com/join/XXXXXXXX'
-  android: '',  // e.g. 'https://play.google.com/apps/testing/com.pushmeup'
-  fallback: 'https://tally.so/r/MeyKbk', // beta signup form
+  ios: CFG.iosTestFlightUrl || '',
+  android: CFG.androidBetaUrl || '',
+  fallback: CFG.tallyFormUrl || '',
 };
 
 (function wireCtas() {
