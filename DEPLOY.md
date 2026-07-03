@@ -31,21 +31,34 @@ window.PUSHMEUP_CONFIG = {
 Only ever put **public, shareable** links here. No secrets, API keys, admin
 URLs, or credentials — this file ships to the browser and the repo is public.
 
-## Connecting a custom domain (e.g. pushmeup.app)
+## Custom domain: pushmeup.app (via Cloudflare DNS → GitHub Pages)
 
-1. **Buy the domain** and open your DNS provider.
-2. **Add DNS records:**
-   - Apex `pushmeup.app` → four `A` records:
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-     (optionally `AAAA`: `2606:50c0:8000::153`, `2606:50c0:8001::153`,
-     `2606:50c0:8002::153`, `2606:50c0:8003::153`)
-   - `www.pushmeup.app` → `CNAME` record pointing to `uxmankaxmi.github.io`
-3. **Tell GitHub the domain** — either option works:
-   - **Repo Settings → Pages → Custom domain**, enter `pushmeup.app`, Save; **or**
-   - Create a file named `CNAME` (no extension) at the repo root containing a
-     single line `pushmeup.app`, then push. The workflow publishes it
-     automatically on the next deploy.
-4. Wait for DNS to propagate, then tick **Enforce HTTPS** in Settings → Pages.
+The domain `pushmeup.app` is registered on Cloudflare, which is used for **DNS
+only**. GitHub Pages hosts the site and issues HTTPS. The apex is canonical and
+`www` redirects to it (GitHub Pages does this automatically).
+
+The [CNAME](CNAME) file at the repo root holds `pushmeup.app`; the deploy
+workflow publishes it, which sets the custom domain on every deploy.
+
+**Cloudflare DNS records** (Cloudflare dashboard → DNS → Records). Every record
+must be **DNS only / grey cloud** — if it is proxied (orange cloud), GitHub
+cannot issue the HTTPS certificate:
+
+| Type  | Name  | Value                                   | Proxy     |
+| ----- | ----- | --------------------------------------- | --------- |
+| A     | `@`   | `185.199.108.153`                       | DNS only  |
+| A     | `@`   | `185.199.109.153`                       | DNS only  |
+| A     | `@`   | `185.199.110.153`                       | DNS only  |
+| A     | `@`   | `185.199.111.153`                       | DNS only  |
+| CNAME | `www` | `uxmankaxmi.github.io`                  | DNS only  |
+
+(Optional IPv6 for the apex — also DNS only: `AAAA @` →
+`2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`,
+`2606:50c0:8003::153`.)
+
+Remove any conflicting `@`/`www` records Cloudflare auto-added (e.g. from the
+earlier Workers connection). Once DNS propagates, GitHub provisions the cert;
+then tick **Enforce HTTPS** in repo Settings → Pages.
 
 ## One-time repo settings
 
