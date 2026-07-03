@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PushMeUp | Stop putting it off. Get a real push.</title>
+  <meta name="description" content="Post the thing you have been avoiding. People show up to push you forward, and when you finish you pass that push on. Join the PushMeUp beta." />
+  <meta property="og:title" content="PushMeUp | Stop putting it off. Get a real push." />
+  <meta property="og:description" content="Post the thing you have been avoiding. People show up to push you forward, and when you finish you pass that push on." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F4F4EF" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg transform='rotate(14 16 16)'%3E%3Crect x='5' y='5' width='5' height='22' rx='2.5' fill='%2316171F'/%3E%3Crect x='13.5' y='5' width='5' height='22' rx='2.5' fill='%23FFD23F'/%3E%3Crect x='22' y='5' width='5' height='22' rx='2.5' fill='%2316171F'/%3E%3C/g%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="header">
+    <div class="wrap header__row">
+      <a class="logo" href="#" aria-label="PushMeUp home">
+        <span class="logo__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        PushMeUp
+      </a>
+      <nav class="header__nav" aria-label="Main">
+        <a class="header__link" href="#how-it-works">How it works</a>
+        <a class="btn btn--push btn--compact" href="#beta" data-cta>Join beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero__kicker">
+          <span class="hero__kicker-bolt" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z" fill="#16171F"/></svg>
+          </span>
+          Social motivation, now in beta
+        </span>
+
+        <h1 class="hero__title">Stop putting it off. Get a <span class="hl">real push.</span></h1>
+
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="hero__lead">Post the thing you have been avoiding. People show up to push you forward. When you finish, you pass that push on.</p>
+            <div class="hero__actions">
+              <a class="btn btn--push" href="#beta" data-cta>
+                Join the beta
+                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <p class="hero__cta-note">Early access for iPhone and Android.</p>
+            </div>
+            <p class="hero__proof">
+              <span class="avatar-stack" aria-hidden="true">
+                <span class="avatar avatar--sm avatar--teal">R</span>
+                <span class="avatar avatar--sm avatar--pink">L</span>
+                <span class="avatar avatar--sm avatar--orange">T</span>
+                <span class="avatar avatar--sm avatar--push">+2k</span>
+              </span>
+              <span><strong>Join 2,400+ people</strong> getting pushes today</span>
+            </p>
+          </div>
+
+          <div class="hero__stage">
+            <!-- hand-drawn "ta-da" emphasis strokes -->
+            <svg class="hero__burst" viewBox="0 0 44 32" fill="none" aria-hidden="true">
+              <path d="M9 29 3 21M22 25l-2.5-17M34 27l8-11" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+            </svg>
+
+            <div class="hero__card-back" aria-hidden="true"></div>
+
+            <span class="support-chip hero__chip-support">
+              <span class="support-chip__bolt" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z" fill="#16171F"/></svg>
+              </span>
+              You've got support.
+            </span>
+
+            <!-- Main task card: faithful feed-card recreation -->
+            <article class="app-card hero__card-main" aria-label="Example PushMeUp post">
+              <div class="app-card__head">
+                <span class="avatar avatar--teal" aria-hidden="true">M</span>
+                <div class="app-card__who">
+                  <strong>Maya R.</strong>
+                  <span>2 hours ago</span>
+                </div>
+                <span class="chip">Avoiding it</span>
+              </div>
+              <p class="app-card__task">Go for my first run in three weeks</p>
+              <div class="app-card__foot">
+                <div class="app-card__pushes">
+                  <span class="tally" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i class="is-push"></i><i></i><i></i><i></i><i class="is-push"></i>
+                  </span>
+                  <span class="app-card__count"><strong>9</strong> pushes</span>
+                </div>
+                <button class="btn btn--push btn--compact js-hero-push" type="button">
+                  Push
+                  <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <div class="hero__supporters">
+                <span class="avatar-stack" aria-hidden="true">
+                  <span class="avatar avatar--sm avatar--pink">J</span>
+                  <span class="avatar avatar--sm avatar--purple">S</span>
+                  <span class="avatar avatar--sm avatar--orange">A</span>
+                  <span class="avatar avatar--sm avatar--push">+6</span>
+                </span>
+                <span><strong>9 people</strong> pushed you</span>
+              </div>
+            </article>
+
+            <span class="support-chip hero__chip-done">
+              <span class="support-chip__bolt" style="background: var(--done-soft);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#1FA86B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              You completed this task
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Live feed strip ================= -->
+    <section class="feed-strip" aria-label="Real tasks being pushed right now">
+      <p class="feed-strip__label"><span class="feed-strip__dot" aria-hidden="true"></span> Real tasks, getting pushed right now</p>
+      <div class="feed-strip__viewport">
+        <div class="marquee">
+          <div class="marquee__group">
+            <span class="mini-card"><span class="chip">Scared</span><span class="mini-card__task">Ask for the raise I deserve</span><span class="mini-card__meta"><span class="tally"><i></i><i></i><i class="is-push"></i></span> 14 pushes</span></span>
+            <span class="mini-card"><span class="chip">Stuck</span><span class="mini-card__task">Run my first 5k</span><span class="mini-card__meta"><span class="tally"><i></i><i class="is-push"></i><i></i></span> 23 pushes</span></span>
+            <span class="mini-card"><span class="chip">Nervous</span><span class="mini-card__task">Call my dad back</span><span class="mini-card__meta"><span class="tally"><i></i><i></i><i class="is-push"></i></span> 8 pushes</span></span>
+            <span class="mini-card"><span class="chip">Avoiding it</span><span class="mini-card__task">Finish chapter three of my thesis</span><span class="mini-card__meta"><span class="tally"><i class="is-push"></i><i></i><i></i></span> 17 pushes</span></span>
+            <span class="mini-card"><span class="chip">Stuck</span><span class="mini-card__task">Send the first invoice</span><span class="mini-card__meta"><span class="tally"><i></i><i class="is-push"></i><i></i></span> 12 pushes</span></span>
+            <span class="mini-card"><span class="chip">Day one</span><span class="mini-card__task">Quit vaping, for real this time</span><span class="mini-card__meta"><span class="tally"><i></i><i></i><i class="is-push"></i></span> 31 pushes</span></span>
+            <span class="mini-card"><span class="chip">Avoiding it</span><span class="mini-card__task">Book the dentist. Finally.</span><span class="mini-card__meta"><span class="tally"><i class="is-push"></i><i></i><i></i></span> 9 pushes</span></span>
+            <span class="mini-card"><span class="chip">Nervous</span><span class="mini-card__task">Post my art online</span><span class="mini-card__meta"><span class="tally"><i></i><i class="is-push"></i><i></i></span> 19 pushes</span></span>
+          </div>
+          <div class="marquee__group" aria-hidden="true">
+            <span class="mini-card"><span class="chip">Scared</span><span class="mini-card__task">Ask for the raise I deserve</span><span class="mini-card__meta"><span class="tally"><i></i><i></i><i class="is-push"></i></span> 14 pushes</span></span>
+            <span class="mini-card"><span class="chip">Stuck</span><span class="mini-card__task">Run my first 5k</span><span class="mini-card__meta"><span class="tally"><i></i><i class="is-push"></i><i></i></span> 23 pushes</span></span>
+            <span class="mini-card"><span class="chip">Nervous</span><span class="mini-card__task">Call my dad back</span><span class="mini-card__meta"><span class="tally"><i></i><i></i><i class="is-push"></i></span> 8 pushes</span></span>
+            <span class="mini-card"><span class="chip">Avoiding it</span><span class="mini-card__task">Finish chapter three of my thesis</span><span class="mini-card__meta"><span class="tally"><i class="is-push"></i><i></i><i></i></span> 17 pushes</span></span>
+            <span class="mini-card"><span class="chip">Stuck</span><span class="mini-card__task">Send the first invoice</span><span class="mini-card__meta"><span class="tally"><i></i><i class="is-push"></i><i></i></span> 12 pushes</span></span>
+            <span class="mini-card"><span class="chip">Day one</span><span class="mini-card__task">Quit vaping, for real this time</span><span class="mini-card__meta"><span class="tally"><i></i><i></i><i class="is-push"></i></span> 31 pushes</span></span>
+            <span class="mini-card"><span class="chip">Avoiding it</span><span class="mini-card__task">Book the dentist. Finally.</span><span class="mini-card__meta"><span class="tally"><i class="is-push"></i><i></i><i></i></span> 9 pushes</span></span>
+            <span class="mini-card"><span class="chip">Nervous</span><span class="mini-card__task">Post my art online</span><span class="mini-card__meta"><span class="tally"><i></i><i class="is-push"></i><i></i></span> 19 pushes</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= How it works ================= -->
+    <section class="section" id="how-it-works" style="padding-top: 0;">
+      <div class="wrap">
+        <span class="overline section__kicker reveal">How it works</span>
+        <h2 class="section__title reveal">Three steps. One honest sentence to start.</h2>
+
+        <div class="steps reveal-group">
+          <!-- connector doodles (desktop) -->
+          <svg class="step-arrow step-arrow--1" viewBox="0 0 76 34" fill="none" aria-hidden="true">
+            <path d="M4 26C20 6 50 4 66 18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 8"/>
+            <path d="M60 10l7 8-10.5 2" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="step-arrow step-arrow--2" viewBox="0 0 76 34" fill="none" aria-hidden="true">
+            <path d="M4 18C20 4 50 6 66 24" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 8"/>
+            <path d="M62 15l6 9-10.5 1" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <!-- Step 1 -->
+          <article class="card card--hoverable step reveal">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title">Say it out loud.</h3>
+            <p class="step__copy">Post the thing you keep putting off. One honest sentence is enough.</p>
+            <div class="step__visual" aria-label="Post composer preview">
+              <div class="app-card">
+                <span class="overline">New post</span>
+                <div class="composer__field" style="margin-top: 0.6rem;">
+                  Finally book that dentist appointment<span class="caret" aria-hidden="true"></span>
+                </div>
+                <div class="composer__foot">
+                  <span class="chip">Stuck</span>
+                  <span class="btn btn--push btn--compact" role="presentation">Post it</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="card card--hoverable step reveal">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title">Get pushed.</h3>
+            <p class="step__copy">Real people show up with a small push to help you start.</p>
+            <div class="step__visual" aria-label="Push interaction preview">
+              <div class="app-card">
+                <div class="app-card__head">
+                  <span class="avatar avatar--pink" aria-hidden="true">D</span>
+                  <div class="app-card__who">
+                    <strong>Dani K.</strong>
+                    <span>1 hour ago</span>
+                  </div>
+                  <span class="chip">Nervous</span>
+                </div>
+                <p class="app-card__task">Send my CV to that job I keep re-reading</p>
+                <div class="app-card__foot">
+                  <div class="app-card__pushes">
+                    <span class="tally" aria-hidden="true"><i></i><i></i><i class="is-push"></i><i></i></span>
+                    <span class="app-card__count"><strong>4</strong> pushes</span>
+                  </div>
+                  <span class="btn btn--pushed" role="presentation">
+                    Pushed
+                    <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="card card--hoverable step reveal">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title">Do it. Pass it on.</h3>
+            <p class="step__copy">Share progress, finish the task, then push someone else forward.</p>
+            <div class="step__visual" aria-label="Progress and completion preview">
+              <div class="app-card">
+                <div class="progress-block" style="margin-top: 0;">
+                  <span class="overline">Progress</span>
+                  <p>Application sent. Hands were shaking, did it anyway.</p>
+                </div>
+                <div class="app-card__foot">
+                  <span class="app-card__count"><strong>4</strong> cheers</span>
+                  <span class="btn btn--done" role="presentation">
+                    <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Completed
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Momentum ================= -->
+    <section class="band-section">
+      <div class="band">
+        <svg class="band__doodle band__doodle--tr" viewBox="0 0 44 32" fill="none" aria-hidden="true">
+          <path d="M9 29 3 21M22 25l-2.5-17M34 27l8-11" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="band__doodle band__doodle--bl" viewBox="0 0 44 32" fill="none" aria-hidden="true">
+          <path d="M9 29 3 21M22 25l-2.5-17M34 27l8-11" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+
+        <div class="wrap momentum__grid">
+          <div class="reveal">
+            <span class="overline section__kicker">Why it works</span>
+            <h2 class="section__title">A little push can create real momentum.</h2>
+            <p class="section__lead">PushMeUp is not another productivity tracker. It is a place where people help each other start, keep going, and finish what matters.</p>
+          </div>
+
+          <div class="card timeline reveal-group" aria-label="The PushMeUp loop, from posting to completing">
+            <div class="timeline__row reveal">
+              <div class="timeline__marker">
+                <span class="timeline__dot" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#16171F" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </span>
+                <span class="timeline__line" aria-hidden="true"></span>
+              </div>
+              <div class="timeline__body">
+                <span class="timeline__label">Posted</span>
+                <p class="timeline__text">"Clear out the garage before winter"</p>
+                <p class="timeline__sub">Tagged: Avoiding it</p>
+              </div>
+            </div>
+
+            <div class="timeline__row reveal">
+              <div class="timeline__marker">
+                <span class="timeline__dot timeline__dot--push" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z" fill="#16171F"/></svg>
+                </span>
+                <span class="timeline__line" aria-hidden="true"></span>
+              </div>
+              <div class="timeline__body">
+                <span class="timeline__label">Pushed</span>
+                <p class="timeline__text">7 people pushed</p>
+                <div class="timeline__pushrow">
+                  <span class="avatar-stack" aria-hidden="true">
+                    <span class="avatar avatar--sm avatar--teal">R</span>
+                    <span class="avatar avatar--sm avatar--orange">T</span>
+                    <span class="avatar avatar--sm avatar--purple">N</span>
+                  </span>
+                  <span class="tally" aria-hidden="true"><i></i><i></i><i></i><i class="is-push"></i><i></i><i></i><i class="is-push"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__row reveal">
+              <div class="timeline__marker">
+                <span class="timeline__dot" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 17l5-6 4 3 7-8" stroke="#1FA86B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="timeline__line" aria-hidden="true"></span>
+              </div>
+              <div class="timeline__body">
+                <span class="timeline__label">Progress</span>
+                <div class="progress-block" style="margin: 0.2rem 0 0;">
+                  <span class="overline">Progress</span>
+                  <p>Half the boxes are out. Found my old skateboard.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__row reveal">
+              <div class="timeline__marker">
+                <span class="timeline__dot timeline__dot--done" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="timeline__body">
+                <span class="timeline__label">Completed</span>
+                <p class="timeline__text">Done. Now it's your turn to push.</p>
+                <div class="timeline__pushrow">
+                  <span class="btn btn--push btn--compact" role="presentation">
+                    Push someone forward
+                    <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Beta ================= -->
+    <section class="section" id="beta">
+      <div class="wrap">
+        <div class="card card--ink beta-card reveal">
+          <span class="chip chip--beta beta-card__badge" aria-hidden="true">Beta</span>
+          <span class="doodle doodle--bars-l" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="doodle doodle--bars-r" aria-hidden="true"><i></i><i></i><i></i></span>
+
+          <span class="overline">Early access</span>
+          <h2 class="beta-card__title" style="margin-top: 0.75rem;">Help shape PushMeUp before launch.</h2>
+          <p class="beta-card__copy">We are inviting early testers to try PushMeUp, share honest feedback, and help build a better way to get things done together.</p>
+          <a class="btn btn--push" href="#beta" data-cta>
+            Join the beta
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="beta-card__note">Free during beta.</p>
+          <p class="beta-card__micro">Your feedback will directly shape what we build next.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" style="padding-top: 0;">
+      <div class="wrap">
+        <h2 class="section__title section__title--center reveal">Good questions.</h2>
+
+        <div class="faq reveal-group">
+          <div class="faq-item reveal">
+            <button class="faq-item__q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              What is a push?
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#16171F" stroke-width="3" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <p>A push is a small, real nudge from another person. It is a tap that says "you've got this, go," and it shows up on your post so you can see people are actually rooting for you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-item__q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              Do I need to know people on the app?
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#16171F" stroke-width="3" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <p>Nope. Most pushes come from people you have never met, strangers who know exactly what avoiding something feels like. You can invite friends too, but you don't need them to get going.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-item__q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              Is PushMeUp a productivity app?
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#16171F" stroke-width="3" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <p>Not really. There are no streaks to protect or charts to fall behind on. PushMeUp is about people helping people start. One task, one push, one finish at a time.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-item__q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              Is PushMeUp free?
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#16171F" stroke-width="3" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <p>Yes, completely free during the beta. If that ever changes, beta testers will hear it from us first.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-item__q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+              How do I join the beta?
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#16171F" stroke-width="3" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a" id="faq-a5" role="region" aria-labelledby="faq-q5">
+              <p>Tap Join the beta anywhere on this page. We'll get you set up on iPhone or Android in a couple of minutes.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="faq__more">Still curious? <a href="#beta" data-cta>Join the beta</a> and ask us anything.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__row">
+        <a class="logo" href="#" aria-label="PushMeUp home">
+          <span class="logo__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          PushMeUp
+        </a>
+        <p class="footer__tag">Say it. Get pushed. Finish it. Pass it on.</p>
+      </div>
+      <p class="footer__small">© 2026 PushMeUp. Made by people who also put things off.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+/* ============================================================
+   PushMeUp: reusable components
+   Buttons, cards, chips, avatars, tally marks, app previews, FAQ
+   ============================================================ */
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Primary: the app's yellow Push CTA */
+.btn--push {
+  background: var(--push);
+  color: var(--ink);
+  box-shadow: var(--shadow-push);
+  padding: 1.15rem 2.3rem;
+  font-size: 1.2rem;
+}
+
+.btn--push:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-push-hover);
+}
+
+.btn--push:active {
+  transform: translateY(4px);
+  box-shadow: var(--shadow-push-press);
+}
+
+.btn--compact {
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+}
+
+/* Cheer: light yellow outline pill, as in the feed */
+.btn--cheer {
+  background: var(--push-soft);
+  border: 2px solid var(--push);
+  color: var(--ink);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* Pushed state: dark pill with check */
+.btn--pushed {
+  background: var(--ink);
+  color: var(--push);
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  cursor: default;
+}
+
+/* Done state: green */
+.btn--done {
+  background: var(--done);
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  cursor: default;
+}
+
+.btn .btn__arrow {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(230, 230, 223, 0.6);
+}
+
+.card--hoverable {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card--hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Dark banner card: like the in-app "YOUR PROGRESS · DAY 7" strip */
+.card--ink {
+  background: var(--ink);
+  color: #fff;
+  border: none;
+}
+
+/* ---------- Chips & labels ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.chip--beta {
+  background: var(--push);
+  border-color: var(--push);
+  font-family: var(--font-headline);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transform: rotate(6deg);
+}
+
+.overline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-overline);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--push-deep);
+}
+
+.card--ink .overline { color: var(--push); }
+
+/* ---------- Avatars ---------- */
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  flex: none;
+}
+
+.avatar--sm { width: 30px; height: 30px; font-size: 0.75rem; }
+.avatar--teal { background: var(--avatar-teal); }
+.avatar--pink { background: var(--avatar-pink); }
+.avatar--purple { background: var(--avatar-purple); }
+.avatar--orange { background: var(--avatar-orange); }
+.avatar--push { background: var(--push); color: var(--ink); }
+
+.avatar-stack {
+  display: inline-flex;
+  align-items: center;
+}
+
+.avatar-stack .avatar {
+  border: 2.5px solid var(--card);
+  margin-left: -9px;
+}
+
+.avatar-stack .avatar:first-child { margin-left: 0; }
+
+/* ---------- Tally marks (push count, matches the app's ////) ---------- */
+
+.tally {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tally i {
+  display: block;
+  width: 4.5px;
+  height: 19px;
+  border-radius: 3px;
+  background: var(--ink);
+  transform: skewX(-16deg);
+}
+
+.tally i.is-push { background: var(--push); }
+
+/* ---------- App preview cards (product UI recreations) ---------- */
+
+.app-card {
+  background: var(--card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(230, 230, 223, 0.6);
+  padding: var(--space-5);
+  font-family: var(--font-body);
+  text-align: left;
+}
+
+.app-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-card__who {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.app-card__who strong {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.app-card__who span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.app-card__head .chip { margin-left: auto; }
+
+.app-card__task {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 3.5vw, 1.4rem);
+  line-height: 1.25;
+  color: var(--ink);
+  margin: var(--space-4) 0;
+}
+
+.app-card__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-card__pushes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.app-card__count {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.app-card__count strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* Progress block: green-edged, as in task detail */
+.progress-block {
+  border-left: 4px solid var(--done);
+  background: #f6f7f3;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin: var(--space-4) 0;
+}
+
+.progress-block .overline {
+  color: var(--done);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.progress-block p {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Composer preview */
+.composer__field {
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-inner);
+  padding: 0.9rem 1rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  background: #fbfbf8;
+}
+
+.composer__field .caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--push-deep);
+  vertical-align: text-bottom;
+  margin-left: 1px;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.composer__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: var(--space-4);
+}
+
+/* Notification chip: "You've got support." */
+.support-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--card);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(230, 230, 223, 0.6);
+  padding: 0.5rem 1.1rem 0.5rem 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.support-chip__bolt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--push);
+  flex: none;
+}
+
+.support-chip__bolt svg { width: 16px; height: 16px; }
+
+/* ---------- FAQ accordion ---------- */
+
+.faq-item {
+  background: var(--card);
+  border-radius: 22px;
+  border: 1.5px solid rgba(230, 230, 223, 0.9);
+  box-shadow: 0 4px 14px rgba(22, 23, 31, 0.04);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faq-item.is-open { border-color: var(--push); }
+
+.faq-item + .faq-item { margin-top: var(--space-3); }
+
+.faq-item__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.3rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.faq-item__q:focus-visible {
+  outline: 3px solid var(--push-deep);
+  outline-offset: -3px;
+}
+
+.faq-item__icon {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--push);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.faq-item__icon svg { width: 14px; height: 14px; }
+
+.faq-item.is-open .faq-item__icon { transform: rotate(45deg); }
+
+.faq-item__a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item__a p {
+  margin: 0;
+  padding: 0 1.5rem 1.35rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Marquee mini feed cards ---------- */
+
+.mini-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 0.85rem 1.25rem;
+  box-shadow: 0 6px 16px rgba(22, 23, 31, 0.05);
+  white-space: nowrap;
+  flex: none;
+}
+
+.mini-card__task {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.mini-card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mini-card__meta .tally i { height: 14px; width: 3.5px; }
+
+.mini-card .chip {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+}
+
+/* ---------- Live push pip (+1 floating off the hero card) ---------- */
+
+@keyframes pip-float {
+  0% { opacity: 0; transform: translateY(6px) scale(0.7) rotate(-4deg); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-34px) scale(1.05) rotate(4deg); }
+}
+
+.push-pip {
+  position: absolute;
+  right: 44px;
+  top: -14px;
+  background: var(--ink);
+  color: var(--push);
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+  animation: pip-float 1.4s ease-out both;
+}
+
+@keyframes btn-nudge {
+  0% { transform: none; }
+  30% { transform: scale(1.07) translateY(-2px); }
+  60% { transform: scale(0.97); }
+  100% { transform: none; }
+}
+
+.btn--push.is-nudged { animation: btn-nudge 0.7s ease; }
+
+.tally i {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tally i.is-flash {
+  transform: skewX(-16deg) scaleY(1.4);
+  background: var(--push-deep);
+}
+
+/* ---------- Doodles ---------- */
+
+.doodle {
+  position: absolute;
+  pointer-events: none;
+  color: var(--push-deep);
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .card--hoverable,
+  .faq-item__icon,
+  .faq-item__a,
+  .tally i {
+    transition: none;
+  }
+  .composer__field .caret,
+  .push-pip,
+  .btn--push.is-nudged {
+    animation: none;
+  }
+}

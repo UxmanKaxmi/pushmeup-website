@@ -1,0 +1,65 @@
+/* ============================================================
+   PushMeUp: shared visual tokens
+   Source of truth: src/shared/theme/colors.ts (mobile app)
+   ============================================================ */
+
+:root {
+  /* Brand: mirrors the app's Tactile Momentum palette */
+  --ink: #16171f;            /* onboardingInk / tactileMomentumSecondary */
+  --ink-soft: #2a2b36;       /* onboardingInkSoft */
+  --paper: #f4f4ef;          /* onboardingPaper */
+  --card: #ffffff;           /* onboardingCard */
+  --push: #ffd23f;           /* onboardingPush / tactileMomentumPrimary */
+  --push-deep: #edbb17;      /* onboardingPushDeep */
+  --push-soft: #fff7dd;      /* cheer-button fill */
+  --done: #1fa86b;           /* onboardingDone */
+  --done-soft: #e3f4ec;      /* onboardingDoneSoft */
+  --muted: #73757d;          /* onboardingMuted */
+  --line: #e6e6df;           /* onboardingLine */
+  --push-tint: #fff0c8;      /* reminderBg: warm yellow wash */
+
+  /* Avatar palette (matches in-app initial avatars) */
+  --avatar-teal: #1a9aa8;
+  --avatar-pink: #e5518d;
+  --avatar-purple: #7b6cf6;
+  --avatar-orange: #ff7043;
+
+  /* Typography: same families the app ships in assets/fonts */
+  --font-headline: 'Bricolage Grotesque', 'Arial Black', sans-serif;
+  --font-body: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Type scale */
+  --text-hero: clamp(2.9rem, 9.5vw, 5.75rem);
+  --text-h2: clamp(2rem, 5vw, 3.1rem);
+  --text-h3: clamp(1.25rem, 3vw, 1.55rem);
+  --text-lead: clamp(1.1rem, 2.5vw, 1.3rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-overline: 0.75rem;
+
+  /* Shape: app cards are large-radius, buttons are full pills */
+  --radius-card: 28px;
+  --radius-inner: 16px;
+  --radius-pill: 999px;
+  --radius-band: 44px;
+
+  /* Elevation: soft and warm, never hard */
+  --shadow-card: 0 1px 2px rgba(22, 23, 31, 0.04), 0 16px 40px rgba(22, 23, 31, 0.08);
+  --shadow-card-hover: 0 2px 4px rgba(22, 23, 31, 0.04), 0 24px 56px rgba(22, 23, 31, 0.12);
+  --shadow-push: 0 5px 0 var(--push-deep);
+  --shadow-push-hover: 0 6px 0 var(--push-deep);
+  --shadow-push-press: 0 1px 0 var(--push-deep);
+
+  /* Spacing rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  --content-max: 1080px;
+}
