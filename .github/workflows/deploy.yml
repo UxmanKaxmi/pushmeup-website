@@ -38,7 +38,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp -r index.html css js _site/
+          cp -r index.html privacy.html css js _site/
           # SEO / discoverability + icons + social preview image.
           cp robots.txt sitemap.xml llms.txt \
              og-image.png og-image.svg \

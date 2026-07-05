@@ -761,8 +761,76 @@ section[id] { scroll-margin-top: 84px; }
   margin: var(--space-4) 0 0;
   color: var(--muted);
   font-size: 0.8rem;
-  opacity: 0.8;
+  opacity: 0.85;
 }
+
+.footer__small a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--push);
+  text-underline-offset: 2px;
+}
+
+.footer__small a:hover { color: var(--push-deep); }
+
+/* ---------- Legal / prose pages ---------- */
+
+.legal { padding-block: var(--space-7) var(--space-8); }
+
+.legal__title {
+  font-size: var(--text-h2);
+  font-weight: 800;
+}
+
+.legal__updated {
+  color: var(--muted);
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-small);
+}
+
+.prose {
+  max-width: 720px;
+  margin-top: var(--space-6);
+}
+
+.prose h2 {
+  font-family: var(--font-headline);
+  font-size: var(--text-h3);
+  font-weight: 800;
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+.prose p,
+.prose li {
+  color: #3f4149;
+  line-height: 1.7;
+}
+
+.prose ul { padding-left: 1.2rem; margin: var(--space-3) 0; }
+.prose li { margin-bottom: var(--space-2); }
+
+.prose a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--push);
+  text-underline-offset: 2px;
+}
+
+.prose a:hover { color: var(--push-deep); }
+
+.legal__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--space-7);
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.legal__back:hover { color: var(--push-deep); }
 
 /* ---------- Scroll reveal ---------- */
 
