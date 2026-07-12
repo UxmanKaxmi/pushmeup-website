@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pushmeup.app",
+      "sha256_cert_fingerprints": [
+        "25:69:72:BD:63:70:46:64:58:04:37:0B:A1:EA:D8:09:6E:BD:56:E3:1C:39:3A:EE:F9:42:CD:D0:47:F9:E6:22",
+        "E4:65:C3:64:12:0B:94:2B:D5:B3:0A:2A:59:A7:CD:26:71:1B:93:CB:6D:FE:52:5A:35:65:95:6E:AF:84:E4:79"
+      ]
+    }
+  }
+]

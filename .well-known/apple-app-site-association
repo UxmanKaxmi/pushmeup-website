@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["ZW59CUVSS3.com.pushmeup.app"],
+        "components": [
+          { "/": "/c/*", "comment": "Circle invite links" },
+          { "/": "/circles/*", "comment": "Circle detail links" }
+        ]
+      }
+    ]
+  }
+}
