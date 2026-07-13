@@ -865,3 +865,94 @@ section[id] { scroll-margin-top: 84px; }
 
   .header { transition: none; }
 }
+
+/* ============================================================
+   What's new — release cards mirroring the app changelog
+   ============================================================ */
+.release {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.release--latest {
+  border: 1.5px solid var(--push);
+  box-shadow: 0 12px 32px rgba(23, 23, 28, 0.07);
+}
+
+.release__badge {
+  display: inline-block;
+  background: var(--push-soft);
+  color: #8a6d1a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.85rem;
+}
+
+.release__badge--muted {
+  background: var(--paper);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.release__title {
+  font-family: var(--font-headline);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-top: var(--space-3);
+}
+
+.release__sub {
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: var(--space-2);
+  max-width: 46ch;
+}
+
+.release__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.release__list li {
+  line-height: 1.5;
+}
+
+.release__list--compact {
+  gap: 0.45rem;
+}
+
+.release__list--compact li {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.release__more {
+  text-align: center;
+  color: var(--muted);
+  margin-top: var(--space-5);
+}
+
+.release__more a {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .release {
+    padding: var(--space-5);
+  }
+
+  .release__title {
+    font-size: 1.25rem;
+  }
+}

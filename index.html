@@ -115,6 +115,7 @@
       </a>
       <nav class="header__nav" aria-label="Main">
         <a class="header__link" href="#how-it-works">How it works</a>
+        <a class="header__link" href="#whats-new">What's new</a>
         <a class="btn btn--push btn--compact" href="#beta" data-cta>Join beta</a>
       </nav>
     </div>
@@ -422,6 +423,57 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= What's new ================= -->
+    <!-- Mirrors the app's in-app changelog (taskswapMobile
+         src/features/MyProfile/data/changelog.ts). When a release ships,
+         move the top release card down and add the new one above it. -->
+    <section class="section" id="whats-new">
+      <div class="wrap">
+        <span class="overline section__kicker reveal">Always shipping</span>
+        <h2 class="section__title reveal">What we're adding to PushMeUp</h2>
+        <p class="section__lead reveal">
+          New features land every week, shaped by the beta crew. The latest, straight from the
+          app's changelog:
+        </p>
+
+        <div class="reveal-group">
+          <article class="release release--latest reveal">
+            <div class="release__head">
+              <span class="release__badge">Latest &middot; Jul 13, 2026</span>
+              <h3 class="release__title">&#11093; Circles: do it together</h3>
+              <p class="release__sub">
+                Commit to one sentence with up to 4 friends. Everyone gets their own goal.
+                Same words, own momentum.
+              </p>
+            </div>
+            <ul class="release__list">
+              <li>&#9993;&#65039; Invite friends right in the app, or send an invite link anywhere.</li>
+              <li>&#9997;&#65039; Share one update a day with your circle, and cheer each other on.</li>
+              <li>&#128075; Nudge a circle-mate. A quiet &ldquo;thinking of you&rdquo;, softer than a push.</li>
+              <li>&#128240; Every circle has an activity feed of everyone&rsquo;s good moments.</li>
+              <li>&#9889; Push a whole circle forward in one tap, right from the feed.</li>
+            </ul>
+          </article>
+
+          <article class="release reveal">
+            <div class="release__head">
+              <span class="release__badge release__badge--muted">Jul 6, 2026</span>
+              <h3 class="release__title">&#129464; Post anonymously &amp; smoother goals</h3>
+            </div>
+            <ul class="release__list release__list--compact">
+              <li>Post goals under a generated alias. Pushes still come from real, named people.</li>
+              <li>Your Impact: a page showing everyone you&rsquo;ve helped.</li>
+              <li>Smoother goal animations, and notifications that jump straight to the goal.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="release__more reveal">
+          And more every week. <a href="#beta" data-cta>The beta crew</a> sees it first.
+        </p>
       </div>
     </section>
 
